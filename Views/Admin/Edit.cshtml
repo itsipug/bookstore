@@ -1,0 +1,77 @@
+﻿@model bookstore.Models.Book
+
+<h2>Edit Book</h2>
+
+<form asp-action="Edit">
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <div class="mb-3">
+                <input type="hidden" asp-for="BookId" />
+                <label asp-for="Title"></label>
+                <input asp-for="Title" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Author"></label>
+                <input asp-for="Author" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Publisher"></label>
+                <input asp-for="Publisher" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ISBN"></label>
+                <input asp-for="ISBN" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label>Category</label>
+                <select asp-for="CategoryId"
+                        asp-items="ViewBag.CategoryId"
+                        class="form-select">
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Price"></label>
+                <input asp-for="Price" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Stocks"></label>
+                <input asp-for="Stocks" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="PublishedDate"></label>
+                <input asp-for="PublishedDate" type="date" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="CoverImage"></label>
+                <input asp-for="CoverImage" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Description"></label>
+                <textarea asp-for="Description" rows="5" class="form-control"></textarea>
+            </div>
+
+            <button class="btn btn-success">
+                Save
+            </button>
+
+            <a asp-action="Index" class="btn btn-secondary">
+                Cancel
+            </a>
+
+        </div>
+
+    </div>
+
+</form>

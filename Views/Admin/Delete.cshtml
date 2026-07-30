@@ -1,0 +1,75 @@
+﻿@model bookstore.Models.Book
+
+<div class="container mt-5">
+
+    <div class="alert alert-danger">
+
+        <h3>Delete Book</h3>
+
+        <p>
+
+            Are you sure you want to delete
+
+            <strong>@Model.Title</strong>?
+
+        </p>
+
+    </div>
+
+    <dl class="row">
+
+        <dt class="col-sm-3">
+            Title
+        </dt>
+
+        <dd class="col-sm-9">
+            @Model.Title
+        </dd>
+
+        <dt class="col-sm-3">
+            Author
+        </dt>
+
+        <dd class="col-sm-9">
+            @Model.Author
+        </dd>
+
+        <dt class="col-sm-3">
+            Category
+        </dt>
+
+        <dd class="col-sm-9">
+            @Model.Category?.CategoryName
+        </dd>
+
+        <dt class="col-sm-3">
+            Price
+        </dt>
+
+        <dd class="col-sm-9">
+            $@Model.Price
+        </dd>
+
+    </dl>
+
+    <form asp-action="Delete">
+
+        <input type="hidden"
+               asp-for="BookId" />
+
+        <button class="btn btn-danger">
+
+            Delete
+
+        </button>
+
+        <a asp-action="Index"
+           class="btn btn-secondary">
+
+            Cancel
+
+        </a>
+
+    </form>
+
+</div>
