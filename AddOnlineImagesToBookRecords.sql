@@ -110,5 +110,5 @@ SET CoverImage = 'https://m.media-amazon.com/images/I/71kBy3EeAtL._AC_UF1000,100
 WHERE BookId = '1031'
 
 UPDATE Books
-SET CoverImage = 'https://m.media-amazon.com/images/I/71kBy3EeAtL._AC_UF1000,1000_QL80_.jpg'
+SET CoverImage = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8t0Qd_pi3uo6s7ybbzK5yX2-I2-J5LeqLKh6rJ43t7g&s=10'
 WHERE BookId = '1032'
